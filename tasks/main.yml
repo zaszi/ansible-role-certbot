@@ -34,11 +34,3 @@
     owner: root
     group: root
     mode: 0644
-
-- name: Set permissions on /var/lib/letsencrypt
-  file:
-    path: /var/lib/letsencrypt
-    owner: root
-    group: http
-    mode: u=rwx,g=rs,o=rx
-    state: directory
