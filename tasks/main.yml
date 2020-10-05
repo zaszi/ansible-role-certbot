@@ -6,7 +6,7 @@
 
 - name: Install certbot automatic renewal unit file
   copy:
-    src: certbot/certbot.service
+    src: certbot.service
     dest: /etc/systemd/system/certbot.service
     owner: root
     group: root
@@ -14,7 +14,7 @@
 
 - name: Install certbot automatic renewal timer file
   copy:
-    src: certbot/certbot.timer
+    src: certbot.timer
     dest: /etc/systemd/system/certbot.timer
     owner: root
     group: root
