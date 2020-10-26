@@ -1,6 +1,6 @@
 ---
 - name: Install Certbot
-  pacman:
+  community.general.pacman:
     name: certbot
     state: present
 
