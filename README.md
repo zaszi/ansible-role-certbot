@@ -24,4 +24,4 @@ correctly. See my [nginx role](https://github.com/zaszi/ansible-role-nginx/).
 
 ## License
 
-Ansible-role-certbot is licensed under the [MIT license](https://github.com/zaszi/ansible-role-certbot/blob/master/LICENSE).
+Ansible-role-certbot is licensed under the [MIT license](LICENSE).
