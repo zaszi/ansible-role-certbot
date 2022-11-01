@@ -5,7 +5,7 @@
     state: present
 
 - name: Install certbot automatic renewal unit file
-  copy:
+  ansible.builtin.copy:
     src: certbot.service
     dest: /etc/systemd/system/certbot.service
     owner: root
@@ -13,7 +13,7 @@
     mode: 0644
 
 - name: Install certbot automatic renewal timer file
-  copy:
+  ansible.builtin.copy:
     src: certbot.timer
     dest: /etc/systemd/system/certbot.timer
     owner: root
@@ -21,14 +21,14 @@
     mode: 0644
 
 - name: Enable certbot timer
-  systemd:
+  ansible.builtin.systemd:
     name: certbot.timer
     enabled: true
     state: started
     daemon_reload: true
 
 - name: Install letsencrypt config for Nginx
-  copy:
+  ansible.builtin.copy:
     src: letsencrypt.conf
     dest: /etc/nginx/conf.d/letsencrypt.conf
     owner: root
