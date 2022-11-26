@@ -26,11 +26,3 @@
     enabled: true
     state: started
     daemon_reload: true
-
-- name: Install letsencrypt config for Nginx
-  ansible.builtin.copy:
-    src: letsencrypt.conf
-    dest: /etc/nginx/conf.d/letsencrypt.conf
-    owner: root
-    group: root
-    mode: 0644
