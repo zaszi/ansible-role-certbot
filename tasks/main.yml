@@ -10,7 +10,7 @@
     dest: /etc/systemd/system/certbot.service
     owner: root
     group: root
-    mode: 0644
+    mode: '644'
 
 - name: Install certbot automatic renewal timer file
   ansible.builtin.copy:
@@ -18,7 +18,7 @@
     dest: /etc/systemd/system/certbot.timer
     owner: root
     group: root
-    mode: 0644
+    mode: '644'
 
 - name: Enable certbot timer
   ansible.builtin.systemd:
